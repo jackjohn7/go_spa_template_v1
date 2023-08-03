@@ -8,12 +8,14 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 
 	"github.com/jackjohn7/go_svelte_spa_template/controllers"
 )
 
 func main() {
 	app := echo.New()
+	app.Pre(middleware.AddTrailingSlash())
 
 	// add SPA (SvelteKit app)
 	app.Static("/", "client/build")
