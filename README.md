@@ -1,10 +1,15 @@
-# Go+SvelteKit Template
+# GO+SPA Template
 
-This is a template application. I hope to create a functioning CLI tool for bootstrapping these types of applications. The idea is that you'll be able to optionally add in TailwindCSS or multiple SPA's served by the Go backend using Echo v4. The Go backend can contain any required database logic and scheduled task execution (business logic). The goal here is to create a reliable starter app providing a middle ground between performance and developer experience.
+This application is set up to serve any SPA application that compiles to static files. In this example, I'm using SvelteKit. React, Angular, and Vue should all work as well however. 
+
+Future features include:
+
+- Rebuilding of clients when their files change
+- Dependencies are automatically installed if they are missing
 
 ```bash
 .
-├── client                  # SvelteKit SPA
+├── client                  # SvelteKit SPA (Example)
 │   ├── package.json
 │   ├── package-lock.json
 │   ├── playwright.config.ts

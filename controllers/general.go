@@ -6,8 +6,13 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func CreateGeneralController(api *echo.Group) {
-	api.GET("/", root)
+// This struct is expansible
+type generalController struct{}
+
+var GeneralController generalController
+
+func (g generalController) Register(controller *echo.Group) {
+	controller.GET("/", root)
 }
 
 func root(c echo.Context) error {
