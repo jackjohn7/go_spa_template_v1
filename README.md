@@ -40,3 +40,17 @@ Future features include:
 ├── README.md
 └── storage                # Contains functions for fetching data from databases
 ```
+
+To register your SPA clients, just add them to this slice! This file can be found [here](/cmd/service/main.go)
+
+``` go
+// add any SPA clients here
+var clients []*server.Client = []*server.Client{
+	{
+		Name:      "client",
+		Prefix:    "/",
+		OutputDir: "client/build",
+		BuildCmd:  []string{"npm", "run", "build"},
+	},
+}
+```
